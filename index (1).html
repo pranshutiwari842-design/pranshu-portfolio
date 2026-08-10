@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pranshu Tiwari | Data Analyst, Data Science, Java Development and Web Development Portfolio">
+<title>Pranshu Tiwari | Data Analyst & Developer</title>
+<style>
+:root{
+ --bg:#07111f;--surface:#0d1b2d;--surface2:#11243b;--text:#eef6ff;
+ --muted:#a9b9cc;--accent:#4bb3ff;--accent2:#8a6cff;--line:#213955;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit;text-decoration:none}.container{width:min(1160px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navin{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:23px;font-weight:850}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}
+.navlinks a:hover{color:var(--text)}
+.hero{padding:100px 0 80px;background:radial-gradient(circle at 82% 20%,rgba(75,179,255,.18),transparent 30%),radial-gradient(circle at 15% 30%,rgba(138,108,255,.14),transparent 27%)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
+.eyebrow{display:inline-block;border:1px solid #31547a;background:#0b1c31;color:#8dceff;padding:7px 13px;border-radius:999px;font-size:12px;font-weight:700}
+h1{font-size:clamp(45px,6vw,76px);line-height:1.02;letter-spacing:-2.5px;margin:20px 0 16px}h1 span{color:var(--accent)}
+.hero h2{font-size:24px;margin-bottom:16px}.hero p{color:var(--muted);font-size:18px;max-width:780px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:12px 18px;border:1px solid #315274;border-radius:9px;font-weight:750;cursor:pointer}
+.btn.primary{background:var(--accent);color:#06101b;border-color:var(--accent)}.btn:hover{transform:translateY(-2px)}
+.profile{background:linear-gradient(145deg,var(--surface2),var(--surface));border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 20px 55px rgba(0,0,0,.25)}
+.avatar{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));font-size:30px;font-weight:850;margin-bottom:18px}
+.profile h3{font-size:23px}.profile p{color:var(--muted);font-size:14px;margin-top:5px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:23px}.stat{background:#091728;border:1px solid var(--line);border-radius:12px;padding:13px;text-align:center}.stat b{display:block;font-size:20px}.stat span{font-size:11px;color:var(--muted)}
+section{padding:82px 0}.section-title{font-size:35px}.section-sub{color:var(--muted);margin:7px 0 30px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:17px;padding:25px}.card p{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.skill-group{background:#091728;border:1px solid var(--line);border-radius:14px;padding:18px}
+.skill-group h3{font-size:16px;margin-bottom:12px;color:#eaf5ff}.skill-list{display:flex;flex-wrap:wrap;gap:8px}
+.skill{padding:7px 10px;border:1px solid #2a4868;background:#0c1c30;border-radius:999px;font-size:12px;color:#d7eaff}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{display:flex;flex-direction:column}
+.tag{color:#82caff;text-transform:uppercase;letter-spacing:.7px;font-size:11px;font-weight:800}.project h3{font-size:23px;margin:7px 0 10px}.project .summary{font-size:14px;margin-bottom:15px}
+.project h4{font-size:13px;margin:15px 0 7px;color:#e8f4ff}.project ul{padding-left:19px;color:var(--muted);font-size:13px}.project li{margin:5px 0}
+.tech{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}.tech span{font-size:11px;padding:5px 8px;background:#0a1728;border:1px solid #294564;border-radius:6px;color:#cfe4f8}
+.links{margin-top:auto;padding-top:18px}.link{color:#78c5ff;font-size:13px;font-weight:800}
+.timeline{border-left:2px solid #294563;padding-left:25px}.role{position:relative;margin-bottom:34px}.role:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--accent);left:-32px;top:8px;box-shadow:0 0 0 5px var(--bg)}
+.role h3{font-size:20px}.meta{color:#7ec5ff;font-size:13px;margin:3px 0 9px}.role ul{padding-left:20px;color:var(--muted);font-size:14px}
+.edu-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact-item{color:var(--muted);margin-top:8px}.contact-item a{color:#7ec5ff}
+.notice{display:none;margin-top:14px;padding:12px;border:1px solid var(--line);border-radius:10px;background:#091728;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:850px){.hero-grid,.about-grid,.project-grid,.edu-grid,.contact-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr 1fr}.navlinks{display:none}}
+@media(max-width:520px){.skills-grid{grid-template-columns:1fr}.hero{padding-top:70px}h1{letter-spacing:-1.5px}}
+</style>
+</head>
+<body>
+
+<nav><div class="container navin">
+ <div class="logo">Pranshu<span>.</span></div>
+ <div class="navlinks">
+  <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+  <a href="#experience">Internships</a><a href="#education">Education</a><a href="#contact">Contact</a>
+ </div>
+</div></nav>
+
+<header class="hero">
+<div class="container hero-grid">
+ <div>
+  <span class="eyebrow">OPEN TO DATA, SOFTWARE & WEB OPPORTUNITIES</span>
+  <h1>Hi, I'm <span>Pranshu Tiwari.</span></h1>
+  <h2>Data Analyst • Data Science • Java Development • Web Development</h2>
+  <p>BCA (Data Science) student with hands-on experience in Python, SQL, Excel, Power BI, Machine Learning, Java, HTML, CSS, React.js, FastAPI and MySQL. I build analytical dashboards, predictive solutions and practical software applications.</p>
+  <div class="buttons">
+   <a class="btn primary" href="#projects">Explore Projects</a>
+   <a class="btn" href="https://drive.google.com/file/d/1Lb8fDVziGrZdT9slfnQprGbFR_5NOtGn/view?usp=drive_link" target="_blank" rel="noopener">View Resume</a>
+   <a class="btn" href="https://www.linkedin.com/in/pranshu-tiwari-6113a7350" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+ </div>
+ <div class="profile">
+  <div class="avatar">PT</div><h3>BCA (Data Science)</h3>
+  <p>SRM Institute of Science and Technology • 2023–2026</p>
+  <div class="stats">
+   <div class="stat"><b>9.4/10</b><span>CGPA</span></div>
+   <div class="stat"><b>5</b><span>Internship Roles</span></div>
+   <div class="stat"><b>6+</b><span>Featured Projects</span></div>
+  </div>
+ </div>
+</div>
+</header>
+
+<section id="about"><div class="container">
+<h2 class="section-title">About Me</h2><p class="section-sub">A data-focused developer combining analytics, programming and web technologies.</p>
+<div class="about-grid">
+ <div class="card">
+  <p>I am pursuing a Bachelor of Computer Applications in Data Science at SRM Institute of Science and Technology. My primary career interests are Data Analytics, Business Intelligence, Data Science, Java Development and Web Development.</p>
+  <p style="margin-top:14px">My work covers data cleaning, EDA, KPI analysis, dashboard development, forecasting, machine learning, database management, REST APIs and application development.</p>
+ </div>
+ <div class="card"><h3>Career Focus</h3>
+  <p style="margin-top:10px">Data Analyst • Data Science • Business Intelligence • Java Developer • Web Developer</p>
+  <p style="margin-top:12px">I enjoy converting raw data and business requirements into useful dashboards, models and software solutions.</p>
+ </div>
+</div>
+</div></section>
+
+<section id="skills"><div class="container">
+<h2 class="section-title">Technical Skills</h2><p class="section-sub">All major skills are organized by domain for quick recruiter review.</p>
+<div class="skills-grid">
+ <div class="skill-group"><h3>1. Data Analytics</h3><div class="skill-list">
+  <span class="skill">Excel</span><span class="skill">Power BI</span><span class="skill">SQL</span><span class="skill">Power Query</span><span class="skill">DAX</span><span class="skill">KPI Analysis</span><span class="skill">Data Cleaning</span><span class="skill">Data Visualization</span><span class="skill">Forecasting</span><span class="skill">Data Modeling</span>
+ </div></div>
+ <div class="skill-group"><h3>2. Python & Data Science</h3><div class="skill-list">
+  <span class="skill">Python</span><span class="skill">Pandas</span><span class="skill">NumPy</span><span class="skill">Matplotlib</span><span class="skill">Seaborn</span><span class="skill">Scikit-learn</span><span class="skill">EDA</span><span class="skill">Machine Learning</span><span class="skill">Predictive Analytics</span>
+ </div></div>
+ <div class="skill-group"><h3>3. SQL & Database</h3><div class="skill-list">
+  <span class="skill">SQL</span><span class="skill">MySQL</span><span class="skill">Database Management</span><span class="skill">CRUD Operations</span><span class="skill">Data Retrieval</span><span class="skill">Data Storage</span>
+ </div></div>
+ <div class="skill-group"><h3>4. Java Development</h3><div class="skill-list">
+  <span class="skill">Java</span><span class="skill">J2EE</span><span class="skill">Object-Oriented Programming</span><span class="skill">Application Development</span>
+ </div></div>
+ <div class="skill-group"><h3>5. Web Development</h3><div class="skill-list">
+  <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">React.js</span><span class="skill">FastAPI</span><span class="skill">REST API</span><span class="skill">Frontend Development</span><span class="skill">Backend Development</span>
+ </div></div>
+ <div class="skill-group"><h3>6. Programming & Tools</h3><div class="skill-list">
+  <span class="skill">C</span><span class="skill">Tkinter</span><span class="skill">Git</span><span class="skill">GitHub</span><span class="skill">MS Office</span><span class="skill">Google Sheets</span>
+ </div></div>
+</div>
+</div></section>
+
+<section id="projects"><div class="container">
+<h2 class="section-title">Projects — Detailed Work</h2><p class="section-sub">Problem, implementation, techniques and technology used in each project.</p>
+<div class="project-grid">
+
+<article class="card project"><span class="tag">Data Analytics • Excel</span><h3>Sales & Profit Dashboard</h3>
+<p class="summary">Interactive Excel dashboard to analyze sales, profit and business performance and make KPI-based decisions.</p>
+<h4>What I implemented</h4><ul>
+<li>Prepared and cleaned business sales data for analysis.</li><li>Created KPI metrics for sales and profit.</li><li>Analyzed monthly trends, state-wise performance and category-wise results.</li><li>Built interactive reports using Pivot Tables, Pivot Charts and Slicers.</li></ul>
+<h4>Techniques Used</h4><ul><li>Data Cleaning & Preparation</li><li>KPI Analysis & Trend Analysis</li><li>Pivot-based aggregation</li><li>Interactive dashboard design</li></ul>
+<div class="tech"><span>Excel</span><span>Pivot Tables</span><span>Pivot Charts</span><span>Slicers</span><span>Data Cleaning</span></div>
+<div class="links"><a class="link" href="https://github.com/pranshutiwari842-design/sales-profit-dashboard" target="_blank">GitHub →</a></div></article>
+
+<article class="card project"><span class="tag">Business Intelligence</span><h3>E-Commerce Power BI Dashboard</h3>
+<p class="summary">Business intelligence dashboard for analyzing e-commerce sales, profit and customer performance.</p>
+<h4>What I implemented</h4><ul>
+<li>Designed KPI cards and interactive visual reports.</li><li>Analyzed sales trends, categories and customer performance.</li><li>Transformed raw data with Power Query.</li><li>Created DAX-based calculated metrics and dynamic reporting.</li></ul>
+<h4>Techniques Used</h4><ul><li>ETL / Data Transformation</li><li>DAX Calculations</li><li>KPI & Trend Analysis</li><li>Interactive Filtering and Visualization</li></ul>
+<div class="tech"><span>Power BI</span><span>Power Query</span><span>DAX</span><span>Data Visualization</span></div>
+<div class="links"><a class="link" href="https://github.com/pranshutiwari842-design/powerbi-ecommerce-dashboard" target="_blank">GitHub →</a></div></article>
+
+<article class="card project"><span class="tag">Machine Learning • BI</span><h3>Customer Churn Prediction Dashboard</h3>
+<p class="summary">Machine-learning solution that predicts customer churn and presents actionable churn patterns through Power BI.</p>
+<h4>What I implemented</h4><ul>
+<li>Cleaned, transformed and prepared historical customer data.</li><li>Performed EDA to identify churn patterns and important variables.</li><li>Built a classification model for churn prediction.</li><li>Evaluated model performance using classification metrics.</li><li>Created Power BI reporting for churn trends, segmentation and KPIs.</li></ul>
+<h4>Techniques Used</h4><ul><li>Data Preprocessing & EDA</li><li>Classification</li><li>Model Evaluation</li><li>Customer Segmentation</li><li>KPI Visualization</li></ul>
+<div class="tech"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>Power BI</span></div>
+<div class="links"><a class="link" href="https://github.com/pranshutiwari842-design/customer-churn-prediction-dashboard" target="_blank">GitHub →</a></div></article>
+
+<article class="card project"><span class="tag">Full Stack • Web Development</span><h3>Business Listings Dashboard</h3>
+<p class="summary">Full-stack application for managing and analyzing business listing data through a web dashboard.</p>
+<h4>What I implemented</h4><ul>
+<li>Built interactive dashboard screens for business data.</li><li>Implemented Create, Read, Update and Delete operations.</li><li>Added search and filtering for efficient data discovery.</li><li>Integrated frontend with a FastAPI backend and MySQL database.</li><li>Added reporting and visualization for business insights.</li></ul>
+<h4>Techniques Used</h4><ul><li>REST API Architecture</li><li>CRUD & Database Integration</li><li>Frontend–Backend Communication</li><li>Search & Filtering</li></ul>
+<div class="tech"><span>HTML</span><span>CSS</span><span>React.js</span><span>FastAPI</span><span>Python</span><span>MySQL</span><span>REST API</span><span>Git</span></div>
+<div class="links"><a class="link" href="https://github.com/pranshutiwari842-design/business-listings-dashboard" target="_blank">GitHub →</a></div></article>
+
+<article class="card project"><span class="tag">Python • Database</span><h3>Student Management System</h3>
+<p class="summary">Desktop application for student record management with a database-backed GUI and CRUD functionality.</p>
+<h4>What I implemented</h4><ul>
+<li>Created a student record management interface using Tkinter.</li><li>Implemented CRUD operations for student records.</li><li>Connected Python application to MySQL.</li><li>Added search and update features for faster record management.</li></ul>
+<h4>Techniques Used</h4><ul><li>GUI Application Development</li><li>SQL / Database Integration</li><li>CRUD Operations</li><li>Search and Update Workflows</li></ul>
+<div class="tech"><span>Python</span><span>MySQL</span><span>Tkinter</span><span>CRUD</span><span>SQL</span></div>
+<div class="links"><a class="link" href="https://github.com/pranshutiwari842-design/student-management-system" target="_blank">GitHub →</a></div></article>
+
+<article class="card project"><span class="tag">Recommendation • Data Science</span><h3>E-Commerce Product Recommendation System</h3>
+<p class="summary">Recommendation-focused project applying data science and machine-learning concepts to an e-commerce use case.</p>
+<h4>What I implemented</h4><ul>
+<li>Prepared e-commerce-oriented data for analysis.</li><li>Applied data preprocessing and exploratory analysis.</li><li>Worked with recommendation-oriented machine learning concepts.</li><li>Focused on using product/customer information for personalized recommendations.</li></ul>
+<h4>Techniques Used</h4><ul><li>Data Preprocessing</li><li>Exploratory Data Analysis</li><li>Recommendation Concepts</li><li>Machine Learning</li></ul>
+<div class="tech"><span>Python</span><span>Data Science</span><span>Machine Learning</span></div>
+<div class="links"><a class="link" href="https://github.com/pranshutiwari842-design/ecommerce-product-recommendation-system" target="_blank">GitHub →</a></div></article>
+
+</div></div></section>
+
+<section id="experience"><div class="container">
+<h2 class="section-title">Internship Experience — Detailed</h2><p class="section-sub">Practical experience, responsibilities, tools and techniques used.</p>
+<div class="timeline">
+
+<div class="role"><h3>Data Analytics Intern — Innovateloop Solution</h3><div class="meta">Virtual • Feb 2026 – Mar 2026</div>
+<ul><li><b>E-Commerce Analytics:</b> Built an E-Commerce Sales Performance Dashboard using Power BI/Tableau to analyze sales trends and KPIs.</li>
+<li><b>Customer Analysis:</b> Performed customer segmentation and prediction using Python, Pandas and Scikit-learn.</li>
+<li><b>Financial Analytics:</b> Conducted financial data analysis and forecasting using Python and visualization tools.</li>
+<li><b>Data Preparation:</b> Cleaned and transformed datasets using SQL and Excel.</li></ul>
+<div class="tech"><span>Python</span><span>SQL</span><span>Excel</span><span>Power BI/Tableau</span><span>Pandas</span><span>Scikit-learn</span><span>Forecasting</span></div></div>
+
+<div class="role"><h3>Uptricks Services Pvt. Ltd.</h3><div class="meta">Apr 2026 – May 2026</div>
+<ul><li><b>Employee Productivity Analysis:</b> Analyzed employee performance data to measure productivity trends and identify factors affecting workforce efficiency.</li>
+<li>Developed productivity metrics and visual reports to support performance improvement and decision-making.</li>
+<li><b>Website Traffic Analysis:</b> Analyzed website traffic and user behavior to identify high-performing pages, navigation patterns and engagement trends.</li>
+<li>Created visualizations and insights to recommend website optimization and improve user experience.</li></ul>
+<div class="tech"><span>Python</span><span>Excel</span><span>Power BI</span><span>Data Analytics</span><span>Data Visualization</span></div></div>
+
+<div class="role"><h3>Bluestock Fintech — Business Listings Dashboard</h3><div class="meta">Apr 2026 – May 2026</div>
+<ul><li>Developed a Business Listings Dashboard to manage and analyze business data.</li><li>Built interactive dashboards and reports for business insights.</li><li>Integrated FastAPI with MySQL for backend data management.</li><li>Implemented CRUD operations, search, filtering and data visualization.</li></ul>
+<div class="tech"><span>React.js</span><span>FastAPI</span><span>Python</span><span>MySQL</span><span>REST API</span><span>Git/GitHub</span></div></div>
+
+<div class="role"><h3>AvaIntern Edutech Pvt. Ltd. — Customer Churn Prediction</h3><div class="meta">May 2026 – Jun 2026</div>
+<ul><li>Developed a machine-learning model to predict customer churn using historical customer data.</li><li>Performed data cleaning, preprocessing and EDA using Python.</li><li>Built interactive Power BI dashboards for churn trends, customer segmentation and KPIs.</li><li>Evaluated model performance using classification metrics.</li></ul>
+<div class="tech"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>Power BI</span><span>Excel</span><span>Machine Learning</span></div></div>
+
+<div class="role"><h3>C Programming Intern — HP Internship</h3><div class="meta">Varanasi • Nov 2023 – Feb 2024</div>
+<ul><li>Developed C programs focusing on logic building and programming fundamentals.</li><li>Worked with arrays, pointers, functions and file handling.</li><li>Built mini-projects including a student management system and calculator.</li></ul>
+<div class="tech"><span>C</span><span>Arrays</span><span>Pointers</span><span>Functions</span><span>File Handling</span></div></div>
+
+</div></div></section>
+
+<section id="education"><div class="container">
+<h2 class="section-title">Education & Certifications</h2><p class="section-sub">Academic foundation and technical training.</p>
+<div class="edu-grid">
+<div class="card"><h3>Bachelor of Computer Applications (Data Science)</h3><p style="margin-top:7px">SRM Institute of Science and Technology • 2023–2026</p><p style="margin-top:8px;color:#7ec5ff;font-weight:750">CGPA: 9.4/10 • Top 3 in BCA Program</p><p style="margin-top:12px">Class XII (CBSE): 59.6% • Class X (CBSE): 87.6%</p></div>
+<div class="card"><h3>Certifications</h3><p style="margin-top:10px">Data Analytics Training — NDMIT (Excel, Power BI, SQL, Python)</p><p style="margin-top:7px">Java & J2EE — UPTEC</p><p style="margin-top:7px">Advanced Excel — Alpran Software Pvt. Ltd.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="container">
+<h2 class="section-title">Contact</h2><p class="section-sub">Let's connect for entry-level roles, internships and collaborative projects.</p>
+<div class="contact-grid">
+<div class="card"><h3>Email</h3><p class="contact-item"><a href="mailto:pranshutiwari842@gmail.com">pranshutiwari842@gmail.com</a></p><p class="contact-item"><a href="tel:+919140029386">+91 9140029386</a></p></div>
+<div class="card"><h3>Professional Profiles</h3><p class="contact-item"><a href="https://www.linkedin.com/in/pranshu-tiwari-6113a7350" target="_blank" rel="noopener">LinkedIn</a></p><p class="contact-item"><a href="https://github.com/pranshutiwari842-design" target="_blank" rel="noopener">GitHub</a></p></div>
+</div>
+</div></section>
+
+<footer>© 2026 Pranshu Tiwari • Data Analyst | Data Science | Java Development | Web Development</footer>
+</body>
+</html>
